@@ -1,7 +1,7 @@
 from tkinter import N
 
-input_test_file_path = "/root/projects/neutrino/langchain-ChatGLM/query/china_law/newquestion1_recall/chinaLaw1027"
-output_prompt_file_path = "/root/projects/neutrino/langchain-ChatGLM/query/china_law/newquestion1_recall/chinaLaw1027Prompt2.txt"
+input_test_file_path = "/root/renxueying/query_reacall/chinaLaw/recall/350/newquestion_350_recall"
+output_prompt_file_path = "/root/renxueying/query_reacall/chinaLaw/recall/350/chinaLaw350Prompt.txt"
 
 # input_test_file_path = "/root/projects/neutrino/langchain-ChatGLM/query/china_law/newquestion1_recall/query_eval_score_600_sentence_size_400"
 # output_prompt_file_path = "/root/projects/neutrino/langchain-ChatGLM/query/china_law/newquestion1_recall/chinalLawPrompt.txt"
@@ -24,8 +24,8 @@ PROMPT_TEMPLATE_dict = {
     "cn":"""请根据我提供的问题和参考文献帮助我解决任务：
 问题：{question}
 参考文献：{context}
-任务：请帮我判断这些文献与问题是否相关，给出相关文献的标号。
-输出格式：按照json格式输出,"相关文献有":[]。
+任务：请帮我判断哪些文献与问题相关，并列出相关文献的标号。
+输出格式：请按照json格式返回结果，如："相关文献有":[1, 2, 3]。
 """,
     "en":"""Please help me solve the task based on the questions and references I have provided:
 Question: {question}
